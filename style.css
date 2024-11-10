@@ -1,0 +1,108 @@
+/* before after */
+
+
+/* 
+p:after {
+    content: "";
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+    display: inline-block;
+} */
+
+
+/* 
+button ::after{
+    content: "";
+
+} */
+
+
+/* .parent{
+    width: 70%;
+    height: 300px;
+    background-color: red;
+    position: relative;
+}
+.child{
+    width: 10rem;
+    height: 10rem;
+    background-color: black;
+    position: absolute;
+    right: 20px;
+} */
+/* top left right bottom */
+/* position relativi ise ana dive veririk */
+/* position absolute hemise bala dive veririk */
+
+
+button {
+    background-color: red;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.bg {
+    background-color: purple;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+button:hover .bg {
+    animation: btnExpand 1s ease-in-out forwards;
+}
+
+button:not(:hover) .bg {
+    animation: btnCollapse 1s ease-in-out forwards;
+}
+
+span {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes btnExpand {
+    0% {
+        width: 0;
+    }
+    20% {
+        width: 100%;
+    }
+    40% {
+        width: 90%;
+    }
+    60% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes btnCollapse {
+    0% {
+        width: 100%;
+    }
+    20% {
+        width: 0;
+    }
+    40% {
+        width: 10%;
+    }
+    60% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
